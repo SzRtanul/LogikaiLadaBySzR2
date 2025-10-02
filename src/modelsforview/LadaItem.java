@@ -26,19 +26,57 @@ public class LadaItem extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        La_nyitvacsukva = new javax.swing.JLabel();
+        La_szin = new javax.swing.JLabel();
+        La_mondat = new javax.swing.JLabel();
+        Bt_kinyit = new javax.swing.JButton();
+
+        setBackground(new java.awt.Color(153, 102, 0));
+
+        La_nyitvacsukva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        La_nyitvacsukva.setText("Nyitva");
+
+        La_szin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        La_szin.setText("Arany");
+
+        La_mondat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        La_mondat.setText("Én rejtem a kincset.");
+
+        Bt_kinyit.setText("Kinyit");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(La_szin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(La_mondat, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+                    .addComponent(Bt_kinyit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(La_nyitvacsukva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(71, 71, 71))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(La_nyitvacsukva, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(La_szin, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(La_mondat, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Bt_kinyit)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bt_kinyit;
+    private javax.swing.JLabel La_mondat;
+    private javax.swing.JLabel La_nyitvacsukva;
+    private javax.swing.JLabel La_szin;
     // End of variables declaration//GEN-END:variables
 }
