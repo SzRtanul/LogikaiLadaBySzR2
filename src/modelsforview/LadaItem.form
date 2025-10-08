@@ -53,7 +53,7 @@
     <Component class="javax.swing.JLabel" name="La_nyitvacsukva">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="Nyitva"/>
+        <Property name="text" type="java.lang.String" value="Csukva"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="La_szin">
@@ -72,6 +72,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Kinyit"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Bt_kinyitActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

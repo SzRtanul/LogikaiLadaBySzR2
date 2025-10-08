@@ -15,7 +15,7 @@ public class Lada {
     String[] ladak;
     boolean megfejtve;
     int megfejtes;
-    int menet;
+    int valasztott;
     
     public Lada(){
         this.ladak = new String[]{
@@ -25,18 +25,24 @@ public class Lada {
         };
         this.megfejtve=false;
         this.megfejtes=1;
-        this.menet=0;
+        this.valasztott=-1;
     }
     
     public boolean doValaszt(int ladaszam){
-        if(!this.megfejtve || this.menet < ladak.length){
-            menet++;
-            megfejtve=this.megfejtes==ladaszam;
+        boolean both = ladaszam > -1 && ladaszam < ladak.length && valasztott == -1;
+        if(both){
+            this.valasztott = ladaszam;
+            this.megfejtve = this.megfejtes == ladaszam;
+            System.out.println(Integer.toBinaryString(-3));
         }
-        return false;
+        return this.megfejtve;
     }
     
-    String[] getLadak(){
+    public int getValasztott(){
+        return this.valasztott;
+    }
+    
+    public String[] getLadak(){
         return Arrays.copyOf(ladak, ladak.length);
     }
     
@@ -45,7 +51,6 @@ public class Lada {
     }
     
     public int getMegfejtes(){
-        boolean both = this.megfejtve || this.menet >= ladak.length;
-        return both ? megfejtes : -1;
+        return valasztott != -1 ? megfejtes : -1;
     }
 }

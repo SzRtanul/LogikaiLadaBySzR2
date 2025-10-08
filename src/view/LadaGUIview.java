@@ -5,23 +5,42 @@
 package view;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 import modelsforview.LadaItem;
+import model.Lada;
 
 /**
  *
  * @author szabo.roland
  */
 public class LadaGUIview extends javax.swing.JFrame {
-
+    LadaItem[] ladak;
     /**
      * Creates new form LadaGUIview
      */
     public LadaGUIview() {
         initComponents();
+        //doMegjelen(new Lada());
+    }
+    
+    public void doMegjelen(Lada lada){
+        String[] ladaTxT = lada.getLadak();
+        ladak = new LadaItem[ladaTxT.length];
         jPanel1.setLayout(new GridLayout(0,3,3,3));
-        for (int i = 0; i < 3; i++) {
-            jPanel1.add(new LadaItem());
+        for (int i = 0; i < ladaTxT.length; i++) {
+            String[] splitted = ladaTxT[i].split(";");
+            ladak[i] = new LadaItem(splitted[0], splitted[1]);
+            jPanel1.add(ladak[i]);
         }
+        this.setVisible(true);
+    }
+    
+    public LadaItem[] getLadak(){
+        return ladak;
+    }
+    
+    public void doLadatNyit(int i, boolean ittvan){
+        if(i > -1 && i < ladak.length) ladak[i].doKinyit(ittvan);
     }
 
     /**

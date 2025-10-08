@@ -4,17 +4,20 @@
  */
 package modelsforview;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author szabo.roland
  */
 public class LadaItem extends javax.swing.JPanel {
-
     /**
      * Creates new form LadaItem
      */
-    public LadaItem() {
+    public LadaItem(String szin, String szoveg) {
         initComponents();
+        La_szin.setText(szin);
+        La_mondat.setText(szoveg);
     }
 
     /**
@@ -34,7 +37,7 @@ public class LadaItem extends javax.swing.JPanel {
         setBackground(new java.awt.Color(153, 102, 0));
 
         La_nyitvacsukva.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        La_nyitvacsukva.setText("Nyitva");
+        La_nyitvacsukva.setText("Csukva");
 
         La_szin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         La_szin.setText("Arany");
@@ -43,6 +46,11 @@ public class LadaItem extends javax.swing.JPanel {
         La_mondat.setText("Én rejtem a kincset.");
 
         Bt_kinyit.setText("Kinyit");
+        Bt_kinyit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Bt_kinyitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -72,7 +80,21 @@ public class LadaItem extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void Bt_kinyitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bt_kinyitActionPerformed
+        
+    }//GEN-LAST:event_Bt_kinyitActionPerformed
 
+    public void doKinyit(boolean ittvan){
+        Bt_kinyit.setVisible(false);
+        La_nyitvacsukva.setText("Nyitva");
+        System.out.println(ittvan);
+        La_mondat.setText((!ittvan ? "Nem itt" : "Itt") + " van a kincs.");
+    }
+    
+    public void addKinyitActionListener(ActionListener action){
+        Bt_kinyit.addActionListener(action);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Bt_kinyit;
     private javax.swing.JLabel La_mondat;

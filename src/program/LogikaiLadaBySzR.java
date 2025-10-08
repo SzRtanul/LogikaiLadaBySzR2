@@ -4,6 +4,10 @@
  */
 package program;
 
+import model.Lada;
+import controller.LadaControl;
+import view.LadaGUIview;
+
 /**
  *
  * @author szabo.roland
@@ -14,7 +18,7 @@ public class LogikaiLadaBySzR {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new LadaControl(new Lada(), new LadaGUIview());
     }
     
 }
