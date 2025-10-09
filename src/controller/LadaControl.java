@@ -23,12 +23,11 @@ public class LadaControl {
             items[i].addKinyitActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    model.doValaszt(-2);
+                    model.doValaszt(it);
                     view.doLadatNyit(model.getValasztott(), model.getMegfejtve());
                     view.doLadatNyit(model.getMegfejtes(), true);
                 }
             });
         }
-        
     }
 }

@@ -44,7 +44,7 @@
               <Component id="La_mondat" pref="24" max="32767" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="Bt_kinyit" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,9 +72,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Kinyit"/>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Bt_kinyitActionPerformed"/>
-      </Events>
     </Component>
   </SubComponents>
 </Form>

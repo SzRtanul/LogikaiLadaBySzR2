@@ -23,6 +23,10 @@ public class Lada {
             "Ezüst;Nem én rejtem a kincset",
             "Bronz;Az arany hazudik",
         };
+        init();
+    }
+    
+    public final void init(){
         this.megfejtve=false;
         this.megfejtes=1;
         this.valasztott=-1;
@@ -33,7 +37,6 @@ public class Lada {
         if(both){
             this.valasztott = ladaszam;
             this.megfejtve = this.megfejtes == ladaszam;
-            System.out.println(Integer.toBinaryString(-3));
         }
         return this.megfejtve;
     }

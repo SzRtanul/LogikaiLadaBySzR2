@@ -5,6 +5,7 @@
 package modelsforview;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -46,11 +47,6 @@ public class LadaItem extends javax.swing.JPanel {
         La_mondat.setText("Én rejtem a kincset.");
 
         Bt_kinyit.setText("Kinyit");
-        Bt_kinyit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Bt_kinyitActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -76,13 +72,9 @@ public class LadaItem extends javax.swing.JPanel {
                 .addComponent(La_mondat, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Bt_kinyit)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addGap(16, 16, 16))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Bt_kinyitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Bt_kinyitActionPerformed
-        
-    }//GEN-LAST:event_Bt_kinyitActionPerformed
 
     public void doKinyit(boolean ittvan){
         Bt_kinyit.setVisible(false);
@@ -93,6 +85,10 @@ public class LadaItem extends javax.swing.JPanel {
     
     public void addKinyitActionListener(ActionListener action){
         Bt_kinyit.addActionListener(action);
+    }
+    
+    public JButton getBt_kinyit(){
+        return Bt_kinyit;
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
